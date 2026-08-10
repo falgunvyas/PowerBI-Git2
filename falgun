@@ -1,0 +1,51 @@
+# Input student details
+name = input("Enter Student Name: ")
+roll_number = input("Enter Roll Number: ")
+
+# Input marks for 5 subjects (out of 100 each)
+maths = float(input("Enter marks in Maths: "))
+science = float(input("Enter marks in Science: "))
+english = float(input("Enter marks in English: "))
+computer = float(input("Enter marks in Computer: "))
+social_science = float(input("Enter marks in Social Science: "))
+
+# 1. Calculate Total Marks
+total_marks = maths + science + english + computer + social_science
+
+# 2. Calculate Percentage
+percentage = (total_marks / 500) * 100
+
+# 3. Determine Grade
+if percentage >= 90:
+  grade = "A+"
+elif percentage >= 80:
+  grade = "A"
+elif percentage >= 51:
+  grade = "B"
+else:
+  grade = "Fail"
+
+# 4. Determine Result
+if percentage >= 50:
+  result = "PASS"
+else:
+  result = "FAIL"
+
+# Display Marksheet
+print("\n" + "=" * 30)
+print("       STUDENT MARKSHEET      ")
+print("=" * 30)
+print(f"Student Name : {name}")
+print(f"Roll Number  : {roll_number}")
+print("-" * 30)
+print(f"Maths        : {maths}")
+print(f"Science      : {science}")
+print(f"English      : {english}")
+print(f"Computer     : {computer}")
+print(f"Social Science: {social_science}")
+print("-" * 30)
+print(f"Total Marks  : {total_marks} / 500")
+print(f"Percentage   : {percentage:.2f}%")
+print(f"Grade        : {grade}")
+print(f"Result       : {result}")
+print("=" * 30)
